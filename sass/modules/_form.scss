@@ -1,0 +1,84 @@
+.form_input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: $grey;
+  padding: 1.2rem 2rem;
+  border: none;
+  border: 2px solid transparent; // to avoid moving input 1px on focus
+  width: 90%;
+  display: block;
+  transition: all 0.3s;
+  margin: 4rem auto;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba($black, 0.1);
+    border: 2px solid $grey;
+  }
+}
+
+//! validate email address in form
+.inputInvalid {
+  border: 2px solid $red;
+}
+
+input {
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: $grey;
+  }
+
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $grey;
+  }
+
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    color: $grey;
+  }
+
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    color: $grey;
+  }
+
+}
+
+.invalid_email {
+  position: absolute;
+  top: 29.4rem;
+  left: 20.4rem;
+}
+
+.invalid_select {
+  position: absolute;
+  top: 38rem;
+  left: 21.8rem;
+}
+
+select {
+
+  background: url('../images/drop-down-arrow.png') no-repeat right $white;
+  -webkit-appearance: none;
+  background-position-x: 30rem;
+  color: $grey;
+  border: 0 none;
+  outline: 1px none;
+
+  option {
+    color: $grey;
+    border: 0 none;
+    outline: 1px none;
+  }
+
+}
+
+.fa-caret-right {
+  margin-left: 9px;
+  margin-bottom: -1px;
+}
+
+#select_icon_box {
+  display: inline-block;
+}

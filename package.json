@@ -1,0 +1,16 @@
+{
+  "name": "angelozzi_camillo_northern_frontend_challenge",
+  "version": "1.0.0",
+  "description": "N_frontend challenge",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "camillo angelozzi",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.9.4"
+  }
+}

@@ -1,0 +1,33 @@
+html {
+  font-size: 62.5%;
+  /* 62.5% of 16px is 10px which is 1rem  - REM fonts will scale from here */
+  min-height: 100%;
+}
+
+body {
+  color: $grey;
+  background-color: $black;
+  box-sizing: border-box;
+}
+
+.heading-underline {
+  display: block;
+  overflow: visible;
+  height: 0;
+  margin: -2.2rem 1.5rem;
+  text-align: inherit;
+  background-color: $red;
+  border: none;
+}
+
+.heading-underline::after {
+  display: inline-block;
+  height: .45rem;
+  width: 11rem;
+  max-width: 100%;
+  content: '';
+  vertical-align: top;
+  background-color: inherit;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
