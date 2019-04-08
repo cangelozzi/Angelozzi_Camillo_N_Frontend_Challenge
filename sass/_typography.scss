@@ -29,6 +29,7 @@
 .paragraph_style {
   font-family: 'Merriweather', serif;
   font-size: 1.5rem;
+  font-weight: 400;
   color: $white;
 
   // tablet size media queries at 760px
@@ -91,6 +92,7 @@
 .error_msg_style {
   font-family: 'Merriweather', serif;
   font-size: .9rem;
+  font-weight: 400;
   color: $white;
 
   // desktop size media queries at 1200px

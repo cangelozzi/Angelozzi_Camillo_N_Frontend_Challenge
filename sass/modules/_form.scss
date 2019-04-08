@@ -103,12 +103,12 @@ input {
 
 .invalid_select {
   position: absolute;
-  top: 38rem;
+  top: 38.6rem;
   left: 21.8rem;
 
   // mobile size media queries at 375px LANDSCAPE
   @media screen and (min-width: 375px) and (orientation: landscape) {
-    top: 31.8rem;
+    top: 32.2rem;
     left: 44.3rem;
   }
 

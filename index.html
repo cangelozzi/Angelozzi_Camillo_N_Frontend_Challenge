@@ -27,16 +27,16 @@
         <p class="paragraph_style form_description">{{ description }}</p>
       </div>
       <form action="">
-        <p v-if="emailErrorMsg" class="error_msg_style invalid_email">
-          Please enter a valid email address.
-        </p>
 
         <div id="input_selection">
-          <input type="email" class="form_input inputfield_style" id="email" placeholder="Your Email Address *"
-            v-model="email" :class="{ inputInvalid: emailErrorMsg }" required />
-          <p v-if="selectErrorMsg" class="error_msg_style invalid_select">
+          <label for="email" v-if="emailErrorMsg" class="error_msg_style invalid_email">
+            Please enter a valid email address.
+          </label>
+          <input type="email" name="email" class="form_input inputfield_style" id="email"
+            placeholder="Your Email Address *" v-model="email" :class="{ inputInvalid: emailErrorMsg }" required />
+          <label v-if="selectErrorMsg" class="error_msg_style invalid_select">
             Please select one option below.
-          </p>
+          </label>
           <select class="form_input inputfield_style" v-model="selected" :class="{ inputInvalid: selectErrorMsg }"
             required>
             <option value="" selected disabled>Your Interests</option>
