@@ -7,7 +7,7 @@ Build a serverless Signup Form.
 - HTML/CSS/JS
 - Gulp.js
 - SASS
-- Javascript Fetch API, to get data from backend database
+- Vue.js
 - Fonts: Montserrat and Merriweather
 
 ### Giving credits for places that helped to do this project
@@ -18,6 +18,6 @@ Build a serverless Signup Form.
 
 ### Future Improvements
 
-- Animations improvements.
+- Animations implementation.
 - Further refactoring SASS structure.
 - Backend and Database implemented.
