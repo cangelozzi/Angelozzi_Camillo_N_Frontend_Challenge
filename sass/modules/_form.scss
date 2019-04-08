@@ -1,6 +1,16 @@
+#input_selection {
+
+  // tablet size media queries at 760px
+  @media screen and (min-width: 760px) {
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
 .form_input {
-  font-size: 1.5rem;
-  font-family: inherit;
+  font-size: 1.6rem;
+  font-family: 'Merriweather', serif;
   color: $grey;
   padding: 1.2rem 2rem;
   border: none;
@@ -10,10 +20,26 @@
   transition: all 0.3s;
   margin: 4rem auto;
 
+  // mobile size media queries at 375px LANDSCAPE
+  @media screen and (min-width: 375px) and (orientation: landscape) {
+    width: 75%;
+  }
+
+  // tablet size media queries at 760px
+  @media screen and (min-width: 760px) {
+    width: 40%;
+    margin: 4rem .4rem;
+  }
+
+  // desktop size media queries at 1200px
+  @media screen and (min-width: 1200px) {
+    width: 31.4%;
+    margin: 4rem .5rem;
+  }
+
   &:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba($black, 0.1);
-    border: 2px solid $grey;
   }
 }
 
@@ -49,12 +75,62 @@ input {
   position: absolute;
   top: 29.4rem;
   left: 20.4rem;
+
+  // mobile size media queries at 375px LANDSCAPE
+  @media screen and (min-width: 375px) and (orientation: landscape) {
+    top: 23.4rem;
+    left: 43rem;
+  }
+
+  // tablet size media queries at 760px
+  @media screen and (min-width: 760px) {
+    top: 32.5rem;
+    left: 22.6rem;
+  }
+
+  // tablet size media queries at 760px LANDSCAPE
+  @media screen and (min-width: 760px) and (orientation: landscape) {
+    top: 25.8rem;
+    left: 35rem;
+  }
+
+  // desktop size media queries at 1200px
+  @media screen and (min-width: 1200px) {
+    top: 42.2rem;
+    left: 51.5rem;
+  }
 }
 
 .invalid_select {
   position: absolute;
   top: 38rem;
   left: 21.8rem;
+
+  // mobile size media queries at 375px LANDSCAPE
+  @media screen and (min-width: 375px) and (orientation: landscape) {
+    top: 31.8rem;
+    left: 44.3rem;
+  }
+
+
+  // tablet size media queries at 760px
+  @media screen and (min-width: 760px) {
+    top: 32.5rem;
+    left: 55.4rem;
+  }
+
+  // tablet size media queries at 760px LANDSCAPE
+  @media screen and (min-width: 760px) and (orientation: landscape) {
+    top: 25.8rem;
+    left: 78.4rem;
+  }
+
+  // desktop size media queries at 1200px
+  @media screen and (min-width: 1200px) {
+    top: 42.2rem;
+    left: 99.4rem;
+  }
+
 }
 
 select {
@@ -65,6 +141,26 @@ select {
   color: $grey;
   border: 0 none;
   outline: 1px none;
+
+  // mobile size media queries at 375px LANDSCAPE
+  @media screen and (min-width: 375px) and (orientation: landscape) {
+    background-position-x: 46rem;
+  }
+
+  // tablet size media queries at 760px
+  @media screen and (min-width: 760px) {
+    background-position-x: 27rem;
+  }
+
+  // tablet size media queries at 760px LANDSCAPE
+  @media screen and (min-width: 760px) and (orientation: landscape) {
+    background-position-x: 37rem;
+  }
+
+  // desktop size media queries at 1200px
+  @media screen and (min-width: 1200px) {
+    background-position-x: 41rem;
+  }
 
   option {
     color: $grey;
@@ -77,6 +173,7 @@ select {
 .fa-caret-right {
   margin-left: 9px;
   margin-bottom: -1px;
+
 }
 
 #select_icon_box {

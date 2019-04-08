@@ -1,8 +1,57 @@
 #thankyou_msg {
+  width: 90%;
+  display: block;
+  margin: 4rem auto;
+
+  // mobile size media queries at 375px LANDSCAPE
+  @media screen and (min-width: 375px) and (orientation: landscape) {
+    width: 75%;
+  }
+
+  // tablet size media queries at 760px
+  @media screen and (min-width: 760px) {
+    width: 81%;
+  }
+
+  // tablet size media queries at 760px LANDSCAPE
+  @media screen and (min-width: 760px) and (orientation: landscape) {
+    width: 80%;
+  }
+
+  // desktop size media queries at 1200px
+  @media screen and (min-width: 1200px) {
+    width: 63.4%;
+  }
 
   p {
-    padding: 3rem 1.69rem;
     line-height: 3rem;
+    margin-top: 2rem;
+
+    // tablet size media queries at 760px
+    @media screen and (min-width: 760px) {
+      line-height: 4rem;
+    }
+
+  }
+
+}
+
+.thankyou_style {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2rem; //TODO mobile - 3.5rem desktop
+  color: $white;
+  margin-top: 4.4rem;
+
+  // tablet size media queries at 760px
+  @media screen and (min-width: 760px) {
+    font-size: 2.8rem;
+  }
+
+  // desktop size media queries at 1200px
+  @media screen and (min-width: 1200px) {
+    font-size: 3.5rem;
+    margin: 5rem 0 2rem 0;
   }
 
 }

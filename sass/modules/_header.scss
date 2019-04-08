@@ -2,10 +2,52 @@
   text-transform: uppercase;
   text-align: center;
   margin: 10rem 0 4rem 0;
+
+  // mobile size media queries at 375px LANDSCAPE
+  @media screen and (min-width: 375px) and (orientation: landscape) {
+    margin: 5rem 0 4rem 0;
+  }
+
+  // desktop size media queries at 1200px
+  @media screen and (min-width: 1200px) {
+    margin: 18rem 0 5rem 0;
+  }
 }
 
 .form_description {
   margin-top: 4.4rem;
-  margin-left: 1.8rem;
-  line-height: 2.6rem
+  line-height: 2.6rem;
+
+  // tablet size media queries at 760px
+  @media screen and (min-width: 760px) {
+    line-height: 3.6rem;
+  }
+
+  // desktop size media queries at 1200px
+  @media screen and (min-width: 1200px) {
+    margin-top: 5.4rem;
+  }
+
+}
+
+#desc {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+
+  // mobile size media queries at 375px LANDSCAPE
+  @media screen and (min-width: 375px) and (orientation: landscape) {
+    width: 74%;
+  }
+
+  // tablet size media queries at 760px
+  @media screen and (min-width: 760px) {
+    width: 81%;
+  }
+
+  // desktop size media queries at 1200px
+  @media screen and (min-width: 1200px) {
+    width: 63.5%;
+    margin-bottom: 1rem;
+  }
 }

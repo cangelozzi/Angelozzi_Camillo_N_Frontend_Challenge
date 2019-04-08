@@ -1,83 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Northern Frontend Challenge</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700%7CMontserrat:700"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/main.css" />
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
-      integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-  </head>
-  <body>
-    <!-- MAIN CONTENT and VUE instance-->
-    <main id="app">
-      <h1 class="heading_style form_title">{{ title }}</h1>
-      <hr class="heading-underline" />
 
-      <!-- Form Content -->
-      <section id="form_content" v-if="content_visible">
-        <h2 class="hidden">Form Content</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Northern Frontend Challenge</title>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700%7CMontserrat:700" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
+    integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+
+<body>
+  <!-- MAIN CONTENT and VUE instance-->
+  <main id="app">
+    <h1 class="heading_style form_title">{{ title }}</h1>
+    <hr class="heading-underline" />
+
+    <!-- Form Content -->
+    <section id="form_content" v-if="content_visible">
+      <h2 class="hidden">Form Content</h2>
+      <div id="desc">
         <p class="paragraph_style form_description">{{ description }}</p>
-        <form action="">
-          <p v-if="emailErrorMsg" class="error_msg_style invalid_email">
-            Please enter a valid email address.
-          </p>
-          <input
-            type="email"
-            class="form_input inputfield_style"
-            id="email"
-            placeholder="Your Email Address *"
-            v-model="email"
-            :class="{ inputInvalid: emailErrorMsg }"
-            required
-          />
+      </div>
+      <form action="">
+        <p v-if="emailErrorMsg" class="error_msg_style invalid_email">
+          Please enter a valid email address.
+        </p>
+
+        <div id="input_selection">
+          <input type="email" class="form_input inputfield_style" id="email" placeholder="Your Email Address *"
+            v-model="email" :class="{ inputInvalid: emailErrorMsg }" required />
           <p v-if="selectErrorMsg" class="error_msg_style invalid_select">
             Please select one option below.
           </p>
-          <select
-            class="form_input inputfield_style"
-            v-model="selected"
-            :class="{ inputInvalid: selectErrorMsg }"
-            required
-          >
+          <select class="form_input inputfield_style" v-model="selected" :class="{ inputInvalid: selectErrorMsg }"
+            required>
             <option value="" selected disabled>Your Interests</option>
             <option value="project_management">Project Management</option>
             <option value="web_development">Development</option>
             <option value="graphic_design">Graphic design</option>
             <option value="digital_marketing">Digital Marketing</option>
           </select>
-          <button
-            type="submit"
-            name="submit"
-            class="button_style"
-            @click.prevent="formSubmit()"
-            :disabled="disableSubmit"
-          >
-            {{ btn_text }}
-            <div :class="{ hidden: iconHidden }" id="select_icon_box">
-              <i class="fas fa-caret-right"></i>
-            </div>
-          </button>
-        </form>
-      </section>
+        </div>
 
-      <!-- Success Message after validation -->
-      <section id="thankyou_msg" v-if="msg_visible">
-        <h2 class="thankyou_style">{{ thank_msg }}</h2>
-        <p class="paragraph_style">{{ final_msg }}</p>
-      </section>
-    </main>
+        <button type="submit" name="submit" class="button_style" @click.prevent="formSubmit()"
+          :disabled="disableSubmit">
+          {{ btn_text }}
+          <div :class="{ hidden: iconHidden }" id="select_icon_box">
+            <i class="fas fa-caret-right"></i>
+          </div>
+        </button>
+      </form>
+    </section>
 
-    <script src="js/app.js"></script>
-  </body>
+    <!-- Success Message after validation -->
+    <section id="thankyou_msg" v-if="msg_visible">
+      <h2 class="thankyou_style">{{ thank_msg }}</h2>
+      <p class="paragraph_style">{{ final_msg }}</p>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+
 </html>

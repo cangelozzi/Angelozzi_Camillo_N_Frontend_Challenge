@@ -18,6 +18,27 @@ body {
   text-align: inherit;
   background-color: $red;
   border: none;
+
+  // mobile size media queries at 375px LANDSCAPE
+  @media screen and (min-width: 375px) and (orientation: landscape) {
+    margin: -2.2rem 8.4rem;
+  }
+
+  // tablet size media queries at 760px
+  @media screen and (min-width: 760px) {
+    margin: -2.2rem 7.25rem;
+  }
+
+  // tablet size media queries at 760px LANDSCAPE
+  @media screen and (min-width: 760px) and (orientation: landscape) {
+    margin: -2.2rem 10rem;
+  }
+
+  // desktop size media queries at 1200px
+  @media screen and (min-width: 1200px) {
+    margin: -2.2rem 26.4rem;
+  }
+
 }
 
 .heading-underline::after {
@@ -30,4 +51,28 @@ body {
   background-color: inherit;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+
+  // mobile size media queries at 375px LANDSCAPE
+  @media screen and (min-width: 375px) and (orientation: landscape) {
+    width: 16rem;
+  }
+
+  // tablet size media queries at 760px
+  @media screen and (min-width: 760px) {
+    height: .5rem;
+    width: 20.2rem;
+  }
+
+  // tablet size media queries at 760px LANDSCAPE
+  @media screen and (min-width: 760px) and (orientation: landscape) {
+    height: 0.6rem;
+    width: 26.2rem;
+  }
+
+  // desktop size media queries at 1200px
+  @media screen and (min-width: 1200px) {
+    height: 0.69rem;
+    width: 29.9rem;
+  }
+
 }

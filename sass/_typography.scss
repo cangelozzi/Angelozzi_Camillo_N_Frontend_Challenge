@@ -1,26 +1,55 @@
 .heading_style {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 2.4rem; //TODO mobile - 6.5rem desktop
+  font-size: 2.4rem;
   color: $white;
+
+
+  // mobile size media queries at 375px LANDSCAPE
+  @media screen and (min-width: 375px) and (orientation: landscape) {
+    font-size: 3.5rem;
+  }
+
+  // tablet size media queries at 760px
+  @media screen and (min-width: 760px) {
+    font-size: 4.4rem;
+  }
+
+  // tablet size media queries at 760px LANDSCAPE
+  @media screen and (min-width: 760px) and (orientation: landscape) {
+    font-size: 5.8rem;
+  }
+
+  // desktop size media queries at 1200px
+  @media screen and (min-width: 1200px) {
+    font-size: 6.5rem;
+  }
 }
 
 .paragraph_style {
   font-family: 'Merriweather', serif;
-  font-size: 1.5rem; //TODO mobile - 2rem desktop
+  font-size: 1.5rem;
   color: $white;
+
+  // tablet size media queries at 760px
+  @media screen and (min-width: 760px) {
+    font-size: 1.8rem;
+  }
+
+  // desktop size media queries at 1200px
+  @media screen and (min-width: 1200px) {
+    font-size: 2rem;
+  }
+
 }
 
 .inputfield_style {
-  font-family: 'Merriweather', serif;
-  font-size: 1.6rem;
   font-style: italic;
-  color: $grey;
 }
 
 .button_style {
   font-family: 'Merriweather', serif;
-  font-size: 1.5rem; //TODO mobile - 2rem desktop
+  font-size: 1.5rem;
   font-weight: 700;
   color: $white;
   padding: 1.2rem 2rem;
@@ -33,6 +62,27 @@
   background-color: $red;
   cursor: pointer;
 
+  // mobile size media queries at 375px LANDSCAPE
+  @media screen and (min-width: 375px) and (orientation: landscape) {
+    width: 75%;
+  }
+
+  // tablet size media queries at 760px
+  @media screen and (min-width: 760px) {
+    width: 81%;
+    margin: 1rem auto;
+  }
+
+  // desktop size media queries at 1200px
+  @media screen and (min-width: 1200px) {
+    font-size: 2rem;
+  }
+
+  // desktop size media queries at 1200px
+  @media screen and (min-width: 1200px) {
+    width: 63.5%;
+  }
+
   &:hover .fa-caret-right {
     transform: translateX(4px);
   }
@@ -40,15 +90,11 @@
 
 .error_msg_style {
   font-family: 'Merriweather', serif;
-  font-size: .9rem; //TODO mobile - 1.2rem desktop
+  font-size: .9rem;
   color: $white;
-}
 
-.thankyou_style {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 2.4rem; //TODO mobile - 3.5rem desktop
-  color: $white;
-  margin-top: 4.4rem;
-  margin-left: 1.69rem;
+  // desktop size media queries at 1200px
+  @media screen and (min-width: 1200px) {
+    font-size: 1.2rem;
+  }
 }
